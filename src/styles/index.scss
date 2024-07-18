@@ -1,0 +1,16 @@
+@import "~normalize.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Just+Another+Hand&display=swap");
+@import "./variables";
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background: #020303;
+  margin: 0;
+  padding: 0;
+  color: white;
+}

@@ -10,6 +10,11 @@
 
 # production
 /build
+# Secret
+.env
+.env.js
+.config-overrides.js
+.firebase.ts
 
 # misc
 .DS_Store

@@ -1,0 +1,15 @@
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding-right: 30px;
+  padding-left: 30px;
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    .button {
+      margin: 0 50px 30px;
+    }
+  }
+}
