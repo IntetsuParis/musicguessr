@@ -10,6 +10,7 @@ export interface VideoSnippet {
     medium: { url: string };
     high: { url: string };
   };
+  channelTitle: string;
 }
 
 export interface VideoItem {
