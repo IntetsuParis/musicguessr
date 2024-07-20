@@ -13,6 +13,7 @@ import VolumeUp from "@mui/icons-material/VolumeUp";
 import ReactPlayer from "react-player";
 import Button from "@mui/material/Button";
 import { Bounce, toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const GuessSong: React.FC = () => {
   const [videos, setVideos] = useState<VideoItem[]>([]);
@@ -78,9 +79,9 @@ const GuessSong: React.FC = () => {
   const handleGuess = (selectedTitle: string) => {
     if (!currentVideo) return;
     if (selectedTitle.toLowerCase() === correctAnswer?.toLowerCase()) {
-      toast.success("🦄 Wow so easy!", {
+      toast.success("Correct", {
         position: "top-center",
-        autoClose: 5000,
+        autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -90,7 +91,17 @@ const GuessSong: React.FC = () => {
         transition: Bounce,
       });
     } else {
-      alert("Incorrect, try again!");
+      toast.error("Incorrect!", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
     }
     handleNextTrack();
   };
